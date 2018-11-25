@@ -16,7 +16,9 @@ function render(data){
         `)
     }).join(" ");
 
-    document.getElementById("messages").innerHTML = html;
+    var divs = document.getElementById("messages")
+    divs.innerHTML = html;
+    divs.scrollTop = divs.scrollHeight;
 }
 
 function addMessage(e){
